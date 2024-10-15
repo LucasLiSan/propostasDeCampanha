@@ -22,13 +22,20 @@ body, html, #container {
     transform-style: preserve-3d;
     position: relative;
 }
-.card:nth-child(1) .front { background-image: url("AnaB11.png"); }
-.card:nth-child(2) .front { background-image: url("Celio20.png"); }
-.card:nth-child(3) .front { background-image: url("Gabriel38.png"); }
-.card:nth-child(4) .front { background-image: url("Heloisa70.jpg"); }
-.card:nth-child(5) .front { background-image: url("MariaAlice30.png"); }
-.card:nth-child(6) .front { background-image: url("MariaEduarda86.png"); }
-.card:nth-child(7) .front { background-image: url("Gabriel38.png"); }
+.card:nth-child(1) .front { background-image: url("AnaB11.webp"); }
+.card:nth-child(1) .back { background-image: url("AnaBVerso11.webp"); }
+.card:nth-child(2) .front { background-image: url("Celio20.webp"); }
+.card:nth-child(2) .back { background-image: url("CelioVerso20.webp"); }
+.card:nth-child(3) .front { background-image: url("MariaAlice30.webp"); }
+.card:nth-child(3) .back { background-image: url("MariaAliceVerso30.webp"); }
+.card:nth-child(4) .front { background-image: url("Gabriel38.webp"); }
+.card:nth-child(4) .back { background-image: url("GabrielVerso38.webp"); }
+.card:nth-child(5) .front { background-image: url("Julia39.webp"); }
+.card:nth-child(5) .back { background-image: url("JuliaVerso39.webp"); }
+.card:nth-child(6) .front { background-image: url("Heloisa70.webp"); }
+.card:nth-child(6) .back { background-image: url("HeloisaVerso70.webp"); }
+.card:nth-child(7) .front { background-image: url("MariaEduarda86.webp"); }
+.card:nth-child(7) .back { background-image: url("MariaEduardaVerso86.webp"); }
 
 .card .face {
     backface-visibility: hidden;
@@ -44,13 +51,11 @@ body, html, #container {
     border-radius: 1.1vw;
 }
 .card .front {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/22/King_of_spades2.svg");
   transform: rotateX(0deg);
   background-size: cover;
 }
 
 .card .back {
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d4/Card_back_01.svg");
     transform: rotateX(180deg);
     background-size: cover;
 }
@@ -76,8 +81,12 @@ body, html, #container {
 .card.flipped:hover .back, .card.flipped.hover .back { transform: rotateX(340deg); }
 
 @media (width < 1025px) {
+    #container {
+        width: 180rem;
+    }
+
     .card {
-        width: 14%;
-        height: 67%;
+        width: 400px;
+        height: 575px;
     }
 }
